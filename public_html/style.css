@@ -1,8 +1,21 @@
+/**************************/
+/*****  Import Police *****/
+/**************************/
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mogra&display=swap");
 
-/* Style global */
+/**************************/
+/*****  Import Police *****/
+/**************************/
+
+
+
+/**************************/
+/******  Style global *****/
+/**************************/
+
 body {
     font-family: lato;
     margin: 0;
@@ -14,6 +27,10 @@ body {
     align-items: center;
     min-height: 100%;
 }
+/**************************/
+/******  Style global *****/
+/**************************/
+
 
 /**************************/
 /********  Header  ********/
@@ -100,9 +117,9 @@ nav ul li a:hover {
 /* CSS pour l'image du logo */
 #maPhoto {
     border:#121212 5px solid;
-    border-radius: 50%; /* Applique un border-radius pour rendre l'image circulaire */
-    width: 20em; /* Ajuste la taille de l'image à ta convenance */
-    height: 20em; /* Garde la même hauteur pour conserver l'aspect circulaire */
+    border-radius: 50%; 
+    width: 20em; 
+    height: 20em; 
 }
 
 .about-me {
@@ -111,9 +128,9 @@ nav ul li a:hover {
     height: 52em;
     background-position: center;
     background-size: cover;
-    display: flex; /* Ajouté pour utiliser flexbox */
-    flex-direction: row; /* Aligne tout en ligne */
-    align-items: center; /* Centrage vertical */
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
 }
 
 .about-overlay {
@@ -352,7 +369,7 @@ nav ul.show {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(130deg, #121212, #696969); /* Tons bleutés */
+    background: linear-gradient(130deg, #121212, #696969); 
     color: #f1faee;
     text-align: center;
 }
@@ -362,7 +379,7 @@ nav ul.show {
     margin: 9em 0;
     max-width: 600px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    background: rgba(0, 0, 0, 0.4); 
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
