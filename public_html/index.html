@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Kylian Houedec, étudiant en BUT Informatique">
+    <title>Portfolio - Kylian Houedec</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Import your CSS styles here for brevity */
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="asset/img/kh.png" alt="Kylian Houedec Logo">
+            </a>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <main id="about">
+        <!-- Section À propos de moi -->
+        
+        <section class="about-me">
+            <div class="about-overlay">
+                <img id="maPhoto" src="asset/img/kylian.jpg" alt="Kylian Houedec">
+                <div class="info">
+                    <h1>Kylian Houedec</h1>
+                    <p>19 ans, étudiant en BUT Informatique à l'IUT de Lannion.</p>
+                    <p>Recherche :</p>
+                    <ul>
+                        <li>Stage en développement (avril 2024).</li>
+                        <li>Alternance en informatique (2024-2025).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <!-- Section Portfolio -->
+        <section id="portfolio">
+            <h2>Mes Projets</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Gestionnaire de tâches</h3>
+                    <p>Application web pour organiser ses tâches et suivre sa productivité.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Site de quiz interactif</h3>
+                    <p>Plateforme web permettant de créer et jouer à des quiz en ligne.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Portfolio dynamique</h3>
+                    <p>Un portfolio avec interface d'administration pour gérer les projets.</p>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <p>Intéressé par mon profil ? N'hésitez pas à me contacter via les moyens ci-dessous :</p>
+            <ul>
+                <li>Email : <a href="mailto:kylian.houedec@example.com">kylian.houedec@example.com</a></li>
+                <li>LinkedIn : <a href="https://linkedin.com/in/kylian-houedec" target="_blank">linkedin.com/in/kylian-houedec</a></li>
+                <li>GitHub : <a href="https://github.com/bzhkylian" target="_blank">github.com/bzhkylian</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kylian Houedec - Tous droits réservés.</p>
+        <p>Conçu avec ❤️ en Bretagne.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
