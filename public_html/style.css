@@ -117,7 +117,7 @@ nav ul li a:hover {
 }
 
 .about-overlay {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     display: flex;
@@ -134,15 +134,26 @@ nav ul li a:hover {
 }
 
 
-
+sup{
+    font-size: 0.7em ;
+}
+strong{
+    color: #00defc;
+}
 .info{
-    margin-right: 15em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 .info > h1{
     font-weight: 600;
     font-family: belanosima;
     font-size: 4em;
+    margin: 0;
+}
+
+.recherche > h2{
+    font-weight: 500;
+    font-family: belanosima;
+    font-size: 2em;
     margin: 0;
 }
 
