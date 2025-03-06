@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Kylian Houedec, étudiant en BUT Informatique">
     <title>Portfolio - Kylian Houedec</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
+
 <body>
 
     <header>
@@ -25,7 +31,7 @@
 
     <main id="about">
         <!-- Section À propos de moi -->
-        
+
         <section class="about-me">
             <div class="about-overlay">
                 <img id="maPhoto" src="asset/img/kylian.jpg" alt="Kylian Houedec">
@@ -39,15 +45,15 @@
                         <h2>À la recherche d'opportunités !</h2>
                         <p>Je suis actuellement à la recherche :</p>
                         <ul>
-                            <li>D'un <strong>stage</strong> début avril 2025 d'une duréé de 8 à 12 semaines, dans le développement informatique, que ce soit web ou logiciel.</li>
-                            <li>D'une <strong>alternance</strong> pour l'année 2025-2026, afin de continuer à développer mes compétences tout en contribuant activement à vos projets.</li>
+                            <li>D'un <strong>stage</strong> début avril 2025 d'une duréé de 8 à 12 semaines, dans le
+                                développement informatique, que ce soit web ou logiciel.</li>
+                            <li>D'une <strong>alternance</strong> pour l'année 2025-2026, afin de continuer à développer
+                                mes compétences tout en contribuant activement à vos projets.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
 
         <!-- Section Portfolio -->
         <section id="portfolio">
@@ -75,9 +81,67 @@
             <p>Intéressé par mon profil ? N'hésitez pas à me contacter via les moyens ci-dessous :</p>
             <ul>
                 <li>Email : <a href="mailto:kylian.houedec@example.com">kylian.houedec@example.com</a></li>
-                <li>LinkedIn : <a href="https://linkedin.com/in/kylian-houedec" target="_blank">linkedin.com/in/kylian-houedec</a></li>
+                <li>LinkedIn : <a href="https://linkedin.com/in/kylian-houedec"
+                        target="_blank">linkedin.com/in/kylian-houedec</a></li>
                 <li>GitHub : <a href="https://github.com/bzhkylian" target="_blank">github.com/bzhkylian</a></li>
             </ul>
+        </section>
+
+        <section id="timeline">
+            <h2>Ma Frise Chronologique</h2>
+            <!-- Conteneur Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>Baccalauréat</h3>
+                            <p>J'ai obtenu mon baccalauréat scientifique, ce qui a marqué le début de mon parcours en
+                                informatique.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>Début en BUT Informatique</h3>
+                            <p>J'ai commencé mes études en BUT Informatique à l'IUT de Lannion, une formation axée sur
+                                le développement et les systèmes.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>Premier Stage</h3>
+                            <p>J'ai effectué mon premier stage dans une agence web où j'ai travaillé sur des projets de
+                                développement front-end.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3>Lancement de mon Portfolio</h3>
+                            <p>J'ai mis en ligne mon premier portfolio pour présenter mes projets de développement web
+                                et mes compétences techniques.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="timeline-date">2027</div>
+                        <div class="timeline-content">
+                            <h3>Premier Projet Freelance</h3>
+                            <p>J'ai commencé à travailler en tant que freelance, en réalisant des sites web sur mesure
+                                pour des clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ajout des boutons de navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </section>
     </main>
 
@@ -92,6 +156,39 @@
             const menu = document.querySelector('nav ul');
             menu.classList.toggle('show');
         }
+
+        // Initialisation de Swiper
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50, // Rotation des éléments
+                stretch: 0, // Espace entre les slides
+                depth: 100, // Profondeur de l'effet
+                modifier: 1, // Facteur de modification de l'effet
+            },
+            loop: true, // Boucle infinie
+            autoplay: {
+                delay: 5000,
+            },
+            spaceBetween: 20, // Espacement entre chaque slide
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true, // Permet à la frise de défiler en boucle
+            grabCursor: true, // Pour montrer un curseur de "prise"
+            mousewheel: true, // Permet le défilement avec la souris
+            touchRatio: 1, // Permet un défilement au toucher
+            breakpoints: {
+                // Pour les petits écrans, tu peux ajuster les paramètres
+                768: {
+                    slidesPerView: 1, // Sur mobile, un seul slide visible à la fois
+                    spaceBetween: 10, // Moins d'espace entre les éléments
+                },
+            },
+        });
+
     </script>
 </body>
+
 </html>
